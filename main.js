@@ -19,14 +19,13 @@ text.addEventListener('keyup', (event)=>{
     };        
 })
 
-
 const picon = document.querySelector('.picon');
 picon.addEventListener('click', ()=>{
     const section = document.querySelector('section');
     const div = document.createElement('div');
     if(text.value != "") {
         div.setAttribute("class","list");
-        div.innerHTML = text.value + `<i class="trash fas fa-trash-alt"></i>`;  
+        div.innerHTML = text.value + `${trashicon}`;  
         section.append(div);
         text.value = "";
         const lists = document.querySelectorAll('.list');
