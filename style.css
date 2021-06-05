@@ -49,3 +49,9 @@ section {
   padding: 5px;
   font-size: 20px;
 }
+.list > i:hover {
+  transition: all 0.3s ease-in-out;
+  color: red;
+  cursor: pointer;
+  transform: scale(1.1);
+}
