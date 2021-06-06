@@ -12,6 +12,9 @@ button {
   border: none;
 }
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   text-align: center;
   padding: 24px;
   font-size: 32px;
@@ -65,7 +68,7 @@ header {
 }
 .items {
   overflow-y: auto;
-  padding: 0;
+  padding: 100px 0;
   margin: 0;
 }
 .item {

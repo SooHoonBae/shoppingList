@@ -9,9 +9,9 @@ function onAdd() {
         footerInput.focus();
         return
     }
-    const item = createItem(text)
+    const item = createItem(text);
     items.appendChild(item);
-        
+    item.scrollIntoView({ block:'center'});    
     footerInput.value='';
     footerInput.focus();
 }
@@ -30,6 +30,7 @@ function createItem(text){
     itemDelete.innerHTML='<i class="fas fa-trash-alt"></i>';
     itemDelete.addEventListener('click',()=>{
         items.removeChild(itemRow);
+        footerInput.focus();
     })
 
     const divider =document.createElement('div');
@@ -46,3 +47,8 @@ function createItem(text){
 addBtn.addEventListener('click',()=>{
     onAdd();
 });
+footerInput.addEventListener('keyup',(e)=>{
+    if(e.keyCode===13) {
+        onAdd();
+    };
+})
